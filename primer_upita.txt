@@ -1,0 +1,7 @@
+SELECT Student.ime, Predmet.naziv, Ispit.ocena
+FROM Student, Ispit, Predmet
+WHERE Student.indeks = Ispit.studentIndeks
+  AND Ispit.predmetId = Predmet.predmetId
+  AND Student.smer = 'SI'
+  AND Ispit.ocena >= 9
+ORDER BY Student.ime;
